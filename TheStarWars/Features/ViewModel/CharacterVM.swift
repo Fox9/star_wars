@@ -20,27 +20,15 @@ class CharacterVM {
     var repository: SearchPersonRepository
     var character: Character?
     
-    var characterURL: String {
-        didSet {
-            self.loadCharacter()
-        }
-    }
+    var characterURL: String
     
     init(url: String) {
         self.repository = SearchPersonRepository()
         self.characterURL = url
+        self.loadCharacter()
     }
     
-    func loadCharacter() {
-        
-        guard NetworkReachabilityManager()?.isReachable ?? false else {
-            if let character = CachingManager.shared.getCharacter(by: self.characterURL) {
-                self.character = character
-                self.delegate?.characterVM(self, didLoadCharacter: character)
-            }
-            return
-        }
-        
+    func loadCharacter() {        
         self.repository.loadCharacter(by: self.characterURL)
             .subscribe(onNext: { (character) in
                 CachingManager.shared.write(character)

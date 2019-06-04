@@ -12,6 +12,7 @@ import RxSwift
 protocol SearchPersonVMDelegate: class {
     func searchPersonVM(_ class: SearchPersonVM, didLoadCharacters character: [Character])
     func searchPersonVM(_ class: SearchPersonVM, didRecieveError message: String)
+    func searchPersonVM(_ class: SearchPersonVM, didUpdateCachingCharacters characters: [Character])
 }
 
 class SearchPersonVM {
@@ -21,17 +22,33 @@ class SearchPersonVM {
     var baseModel: BaseModel?
     var characters: [Character] = []
     
+    lazy var chachedCharacters = CachingManager.shared.getCharacters()
+    
+    var searchChachedCharacters: [Character] = []
+    
     private var repository: SearchPersonRepository
     
     init() {
         self.repository = SearchPersonRepository()
     }
     
+    func search(text: String) {
+        if text == "" {
+            self.searchChachedCharacters = Array(self.chachedCharacters)
+        } else {
+            self.searchChachedCharacters = self.chachedCharacters.filter({ $0.name.range(of: text, options: .caseInsensitive) != nil })
+        }
+        self.delegate?.searchPersonVM(self, didUpdateCachingCharacters: self.searchChachedCharacters)
+
+    }
+    
     func loadCharacters(text: String) {
         self.repository.loadCharacters(text: text)
             .subscribe(onNext: { (baseModel) in
                 self.baseModel = baseModel
-                self.characters = baseModel.results
+                self.characters = baseModel.results.filter({ (character) -> Bool in
+                    return !self.characters.contains(where: { $0.url == character.url })
+                })
                 self.delegate?.searchPersonVM(self, didLoadCharacters: self.characters)
             }, onError: { (error) in
                 self.delegate?.searchPersonVM(self, didRecieveError: error.localizedDescription)
@@ -43,7 +60,10 @@ class SearchPersonVM {
         self.repository.loadCharacters(nextPage: nextPage)
             .subscribe(onNext: { (baseModel) in
                 self.baseModel = baseModel
-                self.characters.append(contentsOf: baseModel.results)
+                let characters = baseModel.results.filter({ (character) -> Bool in
+                    return !self.characters.contains(where: { $0.url == character.url })
+                })
+                self.characters.append(contentsOf: characters)
                 self.delegate?.searchPersonVM(self, didLoadCharacters: self.characters)
             }, onError: { (error) in
                 self.delegate?.searchPersonVM(self, didRecieveError: error.localizedDescription)

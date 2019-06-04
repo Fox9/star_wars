@@ -9,6 +9,11 @@
 import UIKit
 
 class SearchPersonVC: UIViewController {
+    
+    enum SearchPersonVCSection: Int {
+        case cashing
+        case searching
+    }
 
     @IBOutlet weak var searchBar: UISearchBar! {
         didSet {
@@ -40,6 +45,7 @@ class SearchPersonVC: UIViewController {
 
 extension SearchPersonVC: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        self.viewModel?.search(text: searchText)
         self.viewModel?.loadCharacters(text: searchText)
     }
 }
@@ -65,20 +71,40 @@ extension SearchPersonVC: UITableViewDelegate {
 }
 
 extension SearchPersonVC: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.viewModel?.characters.count ?? 0
+        switch SearchPersonVCSection(rawValue: section)! {
+        case .cashing:
+            return self.viewModel?.chachedCharacters.count ?? 0
+        case .searching:
+            return self.viewModel?.characters.count ?? 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CharacterTVCell.identifier) as! CharacterTVCell
-        cell.setup(character: self.viewModel!.characters[indexPath.row])
+        switch SearchPersonVCSection(rawValue: indexPath.section)! {
+        case .cashing:
+            cell.setup(character: self.viewModel!.chachedCharacters[indexPath.row])
+        case .searching:
+            cell.setup(character: self.viewModel!.characters[indexPath.row])
+        }
         return cell
     }
 }
 
 extension SearchPersonVC: SearchPersonVMDelegate {
+    
+    func searchPersonVM(_ class: SearchPersonVM, didUpdateCachingCharacters characters: [Character]) {
+        self.charactersTableView.reloadSections(IndexSet([0]), with: .automatic)
+    }
+    
     func searchPersonVM(_ class: SearchPersonVM, didLoadCharacters character: [Character]) {
-        self.charactersTableView.reloadData()
+        self.charactersTableView.reloadSections(IndexSet([1]), with: .automatic)
     }
     
     func searchPersonVM(_ class: SearchPersonVM, didRecieveError message: String) {

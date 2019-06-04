@@ -28,6 +28,10 @@ class Character: Object, Mappable {
         self.init()
     }
     
+    override static func primaryKey() -> String? {
+        return "url"
+    }
+    
     func mapping(map: Map) {
         self.birth_year <- map["birth_year"]
         self.eye_color <- map["eye_color"]

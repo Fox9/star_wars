@@ -41,5 +41,8 @@ class CachingManager {
         return realm.objects(Character.self).filter("%url = \(url)").first
     }
     
-
+    func getCharacters() -> Results<Character> {
+        return realm.objects(Character.self)
+    }
+    
 }

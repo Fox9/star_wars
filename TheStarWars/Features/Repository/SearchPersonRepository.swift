@@ -13,6 +13,10 @@ import ObjectMapper
 
 class SearchPersonRepository {
     
+    func isReachable() -> Bool {
+        return NetworkReachabilityManager()?.isReachable ?? false
+    }
+    
     func loadCharacters(text: String) -> Observable<BaseModel> {
         return Observable.create({ (observer) -> Disposable in
             ApiClient.shared.search(person: text) { (response, error) in

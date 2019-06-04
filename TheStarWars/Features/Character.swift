@@ -8,20 +8,21 @@
 
 import Foundation
 import ObjectMapper
+import RealmSwift
 
-class Character: Mappable {
-    var birth_year: String = ""
-    var eye_color: String = ""
-    var gender: String = ""
-    var hair_color: String = ""
-    var height: String = ""
-    var homeworld: String = ""
-    var mass: String = ""
-    var name: String = ""
-    var skin_color: String = ""
-    var created: Date = Date()
-    var edited: Date = Date()
-    var url: String = ""
+class Character: Object, Mappable {
+    @objc dynamic var birth_year: String = ""
+    @objc dynamic var eye_color: String = ""
+    @objc dynamic var gender: String = ""
+    @objc dynamic var hair_color: String = ""
+    @objc dynamic var height: String = ""
+    @objc dynamic var homeworld: String = ""
+    @objc dynamic var mass: String = ""
+    @objc dynamic var name: String = ""
+    @objc dynamic var skin_color: String = ""
+    @objc dynamic var created: Date = Date()
+    @objc dynamic var edited: Date = Date()
+    @objc dynamic var url: String = ""
     
     required convenience init?(map: Map) {
         self.init()

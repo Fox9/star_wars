@@ -8,6 +8,7 @@
 
 import Foundation
 import RxSwift
+import Alamofire
 import ObjectMapper
 
 class SearchPersonRepository {
@@ -31,6 +32,20 @@ class SearchPersonRepository {
             ApiClient.shared.open(url: nextPage) { (response, error) in
                 if let json = response as? [String: Any], let baseModel = Mapper<BaseModel>().map(JSON: json) {
                     observer.onNext(baseModel)
+                    observer.onCompleted()
+                } else {
+                    observer.onError(error ?? NetworkError.BACKEND_ERROR)
+                }
+            }
+            return Disposables.create()
+        })
+    }
+    
+    func loadCharacter(by url: String) -> Observable<Character> {
+        return Observable.create({ (observer) -> Disposable in
+            ApiClient.shared.open(url: url) { (response, error) in
+                if let json = response as? [String: Any], let character = Mapper<Character>().map(JSON: json) {
+                    observer.onNext(character)
                     observer.onCompleted()
                 } else {
                     observer.onError(error ?? NetworkError.BACKEND_ERROR)

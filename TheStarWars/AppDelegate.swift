@@ -8,6 +8,7 @@
 
 import UIKit
 import AlamofireNetworkActivityLogger
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        self.setupRealm()
+        
         NetworkActivityLogger.shared.level = .debug
         NetworkActivityLogger.shared.startLogging()
         return true
@@ -42,6 +46,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    func setupRealm() {
+        var realmConfiguration = Realm.Configuration.defaultConfiguration
+        realmConfiguration.deleteRealmIfMigrationNeeded = true
+        Realm.Configuration.defaultConfiguration = realmConfiguration
+    }
+
 
 
 }

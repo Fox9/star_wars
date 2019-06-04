@@ -16,6 +16,9 @@
 		7AAA4CE422A62F4200C90DE8 /* SearchPersonRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAA4CE322A62F4200C90DE8 /* SearchPersonRepository.swift */; };
 		7AAA4CE722A6353D00C90DE8 /* CharacterTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAA4CE522A6353D00C90DE8 /* CharacterTVCell.swift */; };
 		7AAA4CE822A6353D00C90DE8 /* CharacterTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AAA4CE622A6353D00C90DE8 /* CharacterTVCell.xib */; };
+		7AAA4CEB22A63ED800C90DE8 /* CachingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAA4CEA22A63ED800C90DE8 /* CachingManager.swift */; };
+		7AAA4CED22A6400300C90DE8 /* CharacterTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAA4CEC22A6400300C90DE8 /* CharacterTVC.swift */; };
+		7AAA4CEF22A6423600C90DE8 /* CharacterVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAA4CEE22A6423600C90DE8 /* CharacterVM.swift */; };
 		7AD6898C22A57531004F07E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD6898B22A57531004F07E7 /* AppDelegate.swift */; };
 		7AD6898E22A57531004F07E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD6898D22A57531004F07E7 /* ViewController.swift */; };
 		7AD6899122A57531004F07E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AD6898F22A57531004F07E7 /* Main.storyboard */; };
@@ -35,6 +38,9 @@
 		7AAA4CE322A62F4200C90DE8 /* SearchPersonRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPersonRepository.swift; sourceTree = "<group>"; };
 		7AAA4CE522A6353D00C90DE8 /* CharacterTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTVCell.swift; sourceTree = "<group>"; };
 		7AAA4CE622A6353D00C90DE8 /* CharacterTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterTVCell.xib; sourceTree = "<group>"; };
+		7AAA4CEA22A63ED800C90DE8 /* CachingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachingManager.swift; sourceTree = "<group>"; };
+		7AAA4CEC22A6400300C90DE8 /* CharacterTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTVC.swift; sourceTree = "<group>"; };
+		7AAA4CEE22A6423600C90DE8 /* CharacterVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterVM.swift; sourceTree = "<group>"; };
 		7AD6898822A57531004F07E7 /* TheStarWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheStarWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AD6898B22A57531004F07E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AD6898D22A57531004F07E7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				7AAA4CD922A6282200C90DE8 /* SearchPersonVM.swift */,
+				7AAA4CEE22A6423600C90DE8 /* CharacterVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -150,6 +157,7 @@
 				7AD6899E22A576B0004F07E7 /* Network */,
 				7AAA4CDE22A62C7600C90DE8 /* Constants.swift */,
 				7AAA4CE022A62CDF00C90DE8 /* Extenstion.swift */,
+				7AAA4CEA22A63ED800C90DE8 /* CachingManager.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -186,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				7AD689A422A583B7004F07E7 /* SearchPersonVC.swift */,
+				7AAA4CEC22A6400300C90DE8 /* CharacterTVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -322,8 +331,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AAA4CE422A62F4200C90DE8 /* SearchPersonRepository.swift in Sources */,
+				7AAA4CED22A6400300C90DE8 /* CharacterTVC.swift in Sources */,
 				7AAA4CD722A626D900C90DE8 /* BaseModel.swift in Sources */,
 				7AD689A022A576CC004F07E7 /* ApiClient.swift in Sources */,
+				7AAA4CEF22A6423600C90DE8 /* CharacterVM.swift in Sources */,
 				7AAA4CE122A62CDF00C90DE8 /* Extenstion.swift in Sources */,
 				7AD689A522A583B7004F07E7 /* SearchPersonVC.swift in Sources */,
 				7AAA4CD522A626CC00C90DE8 /* Character.swift in Sources */,
@@ -332,6 +343,7 @@
 				7AD6898C22A57531004F07E7 /* AppDelegate.swift in Sources */,
 				7AAA4CE722A6353D00C90DE8 /* CharacterTVCell.swift in Sources */,
 				7AAA4CDF22A62C7600C90DE8 /* Constants.swift in Sources */,
+				7AAA4CEB22A63ED800C90DE8 /* CachingManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

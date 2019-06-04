@@ -8,15 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		794AD1110CDA13BAD1264EEC /* Pods_TheStarWars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C094E2B3345773ECC95B9F3 /* Pods_TheStarWars.framework */; };
+		7AAA4CD522A626CC00C90DE8 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAA4CD422A626CC00C90DE8 /* Character.swift */; };
+		7AAA4CD722A626D900C90DE8 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAA4CD622A626D900C90DE8 /* BaseModel.swift */; };
+		7AAA4CDA22A6282200C90DE8 /* SearchPersonVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAA4CD922A6282200C90DE8 /* SearchPersonVM.swift */; };
+		7AAA4CDF22A62C7600C90DE8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAA4CDE22A62C7600C90DE8 /* Constants.swift */; };
+		7AAA4CE122A62CDF00C90DE8 /* Extenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAA4CE022A62CDF00C90DE8 /* Extenstion.swift */; };
+		7AAA4CE422A62F4200C90DE8 /* SearchPersonRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAA4CE322A62F4200C90DE8 /* SearchPersonRepository.swift */; };
+		7AAA4CE722A6353D00C90DE8 /* CharacterTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAA4CE522A6353D00C90DE8 /* CharacterTVCell.swift */; };
+		7AAA4CE822A6353D00C90DE8 /* CharacterTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AAA4CE622A6353D00C90DE8 /* CharacterTVCell.xib */; };
 		7AD6898C22A57531004F07E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD6898B22A57531004F07E7 /* AppDelegate.swift */; };
 		7AD6898E22A57531004F07E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD6898D22A57531004F07E7 /* ViewController.swift */; };
 		7AD6899122A57531004F07E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AD6898F22A57531004F07E7 /* Main.storyboard */; };
 		7AD6899322A57532004F07E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AD6899222A57532004F07E7 /* Assets.xcassets */; };
 		7AD6899622A57532004F07E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AD6899422A57532004F07E7 /* LaunchScreen.storyboard */; };
+		7AD689A022A576CC004F07E7 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD6899F22A576CC004F07E7 /* ApiClient.swift */; };
+		7AD689A522A583B7004F07E7 /* SearchPersonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD689A422A583B7004F07E7 /* SearchPersonVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4456397CB1B533463D82F606 /* Pods-TheStarWars.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheStarWars.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TheStarWars/Pods-TheStarWars.debug.xcconfig"; sourceTree = "<group>"; };
+		7AAA4CD422A626CC00C90DE8 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Character.swift; path = TheStarWars/Features/Character.swift; sourceTree = SOURCE_ROOT; };
+		7AAA4CD622A626D900C90DE8 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		7AAA4CD922A6282200C90DE8 /* SearchPersonVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPersonVM.swift; sourceTree = "<group>"; };
+		7AAA4CDE22A62C7600C90DE8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7AAA4CE022A62CDF00C90DE8 /* Extenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extenstion.swift; sourceTree = "<group>"; };
+		7AAA4CE322A62F4200C90DE8 /* SearchPersonRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPersonRepository.swift; sourceTree = "<group>"; };
+		7AAA4CE522A6353D00C90DE8 /* CharacterTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTVCell.swift; sourceTree = "<group>"; };
+		7AAA4CE622A6353D00C90DE8 /* CharacterTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterTVCell.xib; sourceTree = "<group>"; };
 		7AD6898822A57531004F07E7 /* TheStarWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheStarWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AD6898B22A57531004F07E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AD6898D22A57531004F07E7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +42,8 @@
 		7AD6899222A57532004F07E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7AD6899522A57532004F07E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7AD6899722A57532004F07E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7AD6899F22A576CC004F07E7 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		7AD689A422A583B7004F07E7 /* SearchPersonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPersonVC.swift; sourceTree = "<group>"; };
 		8C094E2B3345773ECC95B9F3 /* Pods_TheStarWars.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheStarWars.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBDF4C42C5BAD0E6F994FD8C /* Pods-TheStarWars.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheStarWars.release.xcconfig"; path = "Pods/Target Support Files/Pods-TheStarWars/Pods-TheStarWars.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,6 +77,40 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7AAA4CD322A626AE00C90DE8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7AAA4CD422A626CC00C90DE8 /* Character.swift */,
+				7AAA4CD622A626D900C90DE8 /* BaseModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7AAA4CD822A6282200C90DE8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7AAA4CD922A6282200C90DE8 /* SearchPersonVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7AAA4CE222A62F2A00C90DE8 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				7AAA4CE322A62F4200C90DE8 /* SearchPersonRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		7AAA4CE922A636FA00C90DE8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7AAA4CE522A6353D00C90DE8 /* CharacterTVCell.swift */,
+				7AAA4CE622A6353D00C90DE8 /* CharacterTVCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		7AD6897F22A57531004F07E7 = {
 			isa = PBXGroup;
 			children = (
@@ -79,13 +133,61 @@
 			isa = PBXGroup;
 			children = (
 				7AD6898B22A57531004F07E7 /* AppDelegate.swift */,
+				7AD6899D22A576A1004F07E7 /* Service */,
+				7AAA4CD322A626AE00C90DE8 /* Model */,
+				7AD689A122A5836B004F07E7 /* Features */,
 				7AD6898D22A57531004F07E7 /* ViewController.swift */,
-				7AD6898F22A57531004F07E7 /* Main.storyboard */,
 				7AD6899222A57532004F07E7 /* Assets.xcassets */,
 				7AD6899422A57532004F07E7 /* LaunchScreen.storyboard */,
 				7AD6899722A57532004F07E7 /* Info.plist */,
 			);
 			path = TheStarWars;
+			sourceTree = "<group>";
+		};
+		7AD6899D22A576A1004F07E7 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				7AD6899E22A576B0004F07E7 /* Network */,
+				7AAA4CDE22A62C7600C90DE8 /* Constants.swift */,
+				7AAA4CE022A62CDF00C90DE8 /* Extenstion.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		7AD6899E22A576B0004F07E7 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				7AD6899F22A576CC004F07E7 /* ApiClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		7AD689A122A5836B004F07E7 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				7AAA4CE922A636FA00C90DE8 /* Views */,
+				7AAA4CE222A62F2A00C90DE8 /* Repository */,
+				7AAA4CD822A6282200C90DE8 /* ViewModel */,
+				7AD689A322A5838B004F07E7 /* Controllers */,
+				7AD689A222A5837F004F07E7 /* Storyboard */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		7AD689A222A5837F004F07E7 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				7AD6898F22A57531004F07E7 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		7AD689A322A5838B004F07E7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7AD689A422A583B7004F07E7 /* SearchPersonVC.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +201,7 @@
 				7AD6898422A57531004F07E7 /* Sources */,
 				7AD6898522A57531004F07E7 /* Frameworks */,
 				7AD6898622A57531004F07E7 /* Resources */,
+				F02B8EC11D2B83BDAE1AEC24 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -150,6 +253,7 @@
 				7AD6899622A57532004F07E7 /* LaunchScreen.storyboard in Resources */,
 				7AD6899322A57532004F07E7 /* Assets.xcassets in Resources */,
 				7AD6899122A57531004F07E7 /* Main.storyboard in Resources */,
+				7AAA4CE822A6353D00C90DE8 /* CharacterTVCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +282,38 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F02B8EC11D2B83BDAE1AEC24 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TheStarWars/Pods-TheStarWars-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityLogger/AlamofireNetworkActivityLogger.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityLogger.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TheStarWars/Pods-TheStarWars-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -185,8 +321,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AAA4CE422A62F4200C90DE8 /* SearchPersonRepository.swift in Sources */,
+				7AAA4CD722A626D900C90DE8 /* BaseModel.swift in Sources */,
+				7AD689A022A576CC004F07E7 /* ApiClient.swift in Sources */,
+				7AAA4CE122A62CDF00C90DE8 /* Extenstion.swift in Sources */,
+				7AD689A522A583B7004F07E7 /* SearchPersonVC.swift in Sources */,
+				7AAA4CD522A626CC00C90DE8 /* Character.swift in Sources */,
+				7AAA4CDA22A6282200C90DE8 /* SearchPersonVM.swift in Sources */,
 				7AD6898E22A57531004F07E7 /* ViewController.swift in Sources */,
 				7AD6898C22A57531004F07E7 /* AppDelegate.swift in Sources */,
+				7AAA4CE722A6353D00C90DE8 /* CharacterTVCell.swift in Sources */,
+				7AAA4CDF22A62C7600C90DE8 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

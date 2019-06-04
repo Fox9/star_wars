@@ -6,5 +6,10 @@ target 'TheStarWars' do
   use_frameworks!
 
   # Pods for TheStarWars
+  pod 'Alamofire'
+  pod 'RxSwift'
+  pod 'RealmSwift'
+  pod 'ObjectMapper'
+  pod 'AlamofireNetworkActivityLogger'
 
 end
